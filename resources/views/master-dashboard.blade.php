@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 
-<!-- Mirrored from pixinvent.com/modern-admin-clean-bootstrap-4-dashboard-html-template/html/ltr/vertical-modern-menu-template/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 08 Apr 2018 03:29:01 GMT -->
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -49,13 +48,11 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
       <div class="navbar-header">
         <ul class="nav navbar-nav flex-row">
           <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
-          <li class="nav-item mr-auto">
+          <li class="nav-item mr-auto" style="text-align: center !important;">
             <a class="navbar-brand" href="#">
-              <img class="brand-logo" alt="modern admin logo" src="/app-assets/images/logo/logo.png">
-              <h3 class="brand-text">Modern Admin</h3>
+              <img class="brand-logo" alt="Perpustakaan SMKN 2 Balikpapan" src="/logo/logo.png" style="width: 50% !important;">
             </a>
           </li>
-          <li class="nav-item d-none d-md-block float-right"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="toggle-icon font-medium-3 white ft-toggle-left" data-ticon="ft-toggle-right"></i></a></li>
           <li class="nav-item d-md-none">
             <a class="nav-link open-navbar-container" data-toggle="collapse" data-target="#navbar-mobile"><i class="la la-ellipsis-v"></i></a>
           </li>
@@ -67,7 +64,7 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
             <li class="nav-item d-none d-md-block"><a class="nav-link nav-link-expand" href="#"><i class="ficon ft-maximize"></i></a></li>
             <li class="nav-item nav-search"><a class="nav-link nav-link-search" href="#"><i class="ficon ft-search"></i></a>
               <div class="search-input">
-                <input class="input" type="text" placeholder="Explore Modern...">
+                <input class="input" type="text" placeholder="Cari..." id="pencarian">
               </div>
             </li>
           </ul>
@@ -75,7 +72,7 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
             <li class="dropdown dropdown-user nav-item">
               <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
                 <span class="mr-1">Hello,
-                  <span class="user-name text-bold-700">Hizkia Mumu</span>
+                  <span class="user-name text-bold-700">{{ Auth::user()->nama }}</span>
                 </span>
                 <span class="avatar avatar-online">
                   <img src="/app-assets/images/portrait/small/avatar-s-19.png" alt="avatar"><i></i></span>
@@ -145,10 +142,10 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
           </a>
           <ul class="menu-content">
             <li class="menu-navigasi" id="listBuku">
-              <a class="menu-item" href="/admin/berita">List Buku</a>
+              <a class="menu-item" href="/admin">List Buku</a>
             </li>
-            <li class="menu-navigasi" id="tambahBuku">
-              <a class="menu-item" href="/admin/berita/tambah-berita">Tambah Buku</a>
+            <li class="menu-navigasi" id="bukuPinjaman">
+              <a class="menu-item" href="/admin/buku-pinjaman">Buku Pinjaman</a>
             </li>
           </ul>
         </li>

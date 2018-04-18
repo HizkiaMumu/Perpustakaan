@@ -7,8 +7,7 @@
   <meta name="description" content="Modern admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities with bitcoin dashboard.">
   <meta name="keywords" content="admin template, modern admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
   <meta name="author" content="PIXINVENT">
-  <title>Login with Background Image - Modern Admin - Clean Bootstrap 4 Dashboard HTML Template
-    + Bitcoin Dashboard</title>
+  <title>LOGIN | Perpustakaan SMK Negeri 2 Balikpapan</title>
   <link rel="apple-touch-icon" href="app-assets/images/ico/apple-icon-120.png">
   <link rel="shortcut icon" type="image/x-icon" href="https://pixinvent.com/modern-admin-clean-bootstrap-4-dashboard-html-template/app-assets/images/ico/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Quicksand:300,400,500,700"
@@ -66,15 +65,13 @@ data-open="click" data-menu="vertical-menu-modern" data-col="1-column">
                     <form class="form-horizontal" action="/login" method="POST" novalidate>
                       {{ csrf_field() }}
                       <fieldset class="form-group position-relative has-icon-left">
-                        <input name="username" type="text" class="form-control" id="user-name" placeholder="Username Anda"
-                        required>
+                        <input name="username" type="text" class="form-control" id="user-name" placeholder="Username Anda" required>
                         <div class="form-control-position">
                           <i class="ft-user"></i>
                         </div>
                       </fieldset>
                       <fieldset class="form-group position-relative has-icon-left">
-                        <input name="password" type="password" class="form-control" id="user-password" placeholder="Password Anda"
-                        required>
+                        <input name="password" type="password" class="form-control" id="user-password" placeholder="Password Anda" required>
                         <div class="form-control-position">
                           <i class="la la-key"></i>
                         </div>

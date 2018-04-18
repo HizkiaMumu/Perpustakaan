@@ -8,6 +8,10 @@ use App\Buku;
 class AdminPagesController extends Controller
 {
 
+    public function register(){
+      return view('dashboard/register');
+    }
+
     public function login(){
       return view('dashboard/login');
     }

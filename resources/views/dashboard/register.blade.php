@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
+
+<!-- Mirrored from pixinvent.com/modern-admin-clean-bootstrap-4-dashboard-html-template/html/ltr/vertical-modern-menu-template/register-with-bg-image.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 08 Apr 2018 03:33:03 GMT -->
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +9,7 @@
   <meta name="description" content="Modern admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities with bitcoin dashboard.">
   <meta name="keywords" content="admin template, modern admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
   <meta name="author" content="PIXINVENT">
-  <title>LOGIN | Perpustakaan SMK Negeri 2 Balikpapan</title>
+  <title>Register | Perpustakaan SMK Negeri 2 Balikpapan</title>
   <link rel="apple-touch-icon" href="app-assets/images/ico/apple-icon-120.png">
   <link rel="shortcut icon" type="image/x-icon" href="https://pixinvent.com/modern-admin-clean-bootstrap-4-dashboard-html-template/app-assets/images/ico/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Quicksand:300,400,500,700"
@@ -43,42 +45,58 @@ data-open="click" data-menu="vertical-menu-modern" data-col="1-column">
           <div class="col-12 d-flex align-items-center justify-content-center">
             <div class="col-md-4 col-10 box-shadow-2 p-0">
               <div class="card border-grey border-lighten-3 px-1 py-1 m-0">
-                <div class="card-header border-0">
+                <div class="card-header border-0 pb-0">
                   <div class="card-title text-center">
                     <img src="logo/logomerah.png" alt="branding logo" style="width: 50%; height: auto;">
                   </div>
                   <h6 class="card-subtitle line-on-side text-muted text-center font-small-3 pt-2">
-                    <span>Admin Login</span>
+                    <span>Register</span>
                   </h6>
                 </div>
-                @if (session('ERR'))
-                  <div class="alert bg-danger alert-icon-left alert-dismissible mb-2" role="alert">
-                    <span class="alert-icon"><i class="la la-warning"></i></span>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <span aria-hidden="true">×</span>
-                    </button>
-                    <strong>Maaf,</strong> {{ session('ERR') }}
-                  </div>
-                @endif
                 <div class="card-content">
                   <div class="card-body">
-                    <form class="form-horizontal" action="/login" method="POST" novalidate>
+                    <form class="form-horizontal" action="/register" method="POST" novalidate>
+
                       {{ csrf_field() }}
+
                       <fieldset class="form-group position-relative has-icon-left">
-                        <input name="username" type="text" class="form-control" id="user-name" placeholder="Username Anda" required>
+                        <input type="text" class="form-control" id="user-name" placeholder="Nama Lengkap" name="nama" required>
                         <div class="form-control-position">
                           <i class="ft-user"></i>
                         </div>
                       </fieldset>
                       <fieldset class="form-group position-relative has-icon-left">
-                        <input name="password" type="password" class="form-control" id="user-password" placeholder="Password Anda" required>
+                        <input type="email" class="form-control" id="user-email" placeholder="Alamat Email" name="email" required>
+                        <div class="form-control-position">
+                          <i class="ft-mail"></i>
+                        </div>
+                      </fieldset>
+                      <fieldset class="form-group position-relative has-icon-left">
+                        <input type="text" class="form-control" id="user-name" placeholder="Username" name="username" required>
+                        <div class="form-control-position">
+                          <i class="ft-user"></i>
+                        </div>
+                      </fieldset>
+                      <fieldset class="form-group position-relative has-icon-left">
+                        <input type="password" class="form-control" id="user-password" placeholder="Enter Password" name="password" required>
                         <div class="form-control-position">
                           <i class="la la-key"></i>
                         </div>
                       </fieldset>
-                      <button type="submit" class="btn btn-outline-info btn-block"><i class="ft-unlock"></i> Login</button>
-                      <a href="/register" class="btn btn-outline-danger btn-block"><i class="ft-user"></i> Register</a>
+                      <div class="form-group row">
+                        <div class="col-md-6 col-12 text-center text-sm-left">
+                          <fieldset>
+                            <input type="checkbox" id="remember-me" class="chk-remember">
+                            <label for="remember-me"> Remember Me</label>
+                          </fieldset>
+                        </div>
+                        <div class="col-md-6 col-12 float-sm-left text-center text-sm-right"><a href="recover-password.html" class="card-link">Forgot Password?</a></div>
+                      </div>
+                      <button type="submit" class="btn btn-outline-info btn-block"><i class="ft-user"></i> Register</button>
                     </form>
+                  </div>
+                  <div class="card-body">
+                    <a href="/login" class="btn btn-outline-danger btn-block"><i class="ft-unlock"></i> Login</a>
                   </div>
                 </div>
               </div>

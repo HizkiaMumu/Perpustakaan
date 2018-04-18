@@ -112,7 +112,9 @@
                   <th>Penerbit</th>
                   <th>Tahun Terbit</th>
                   <th>ISBN</th>
-                  <th>Action</th>
+                  @if(Auth::user()->level == 0)
+                    <th>Action</th>
+                  @endif
                 </tr>
               </thead>
               <tbody>
@@ -125,15 +127,17 @@
                     <td>{{ $item->penerbit }}</td>
                     <td>{{ $item->tahun_terbit->format('Y') }}</td>
                     <td>{{ $item->isbn }}</td>
-                    <td>
-                      <a href="/admin/buku/hapus-buku/{{ $item->id }}" class="btn btn-danger btn-glow btn-sm m-1">
-                        <i class="ft-trash-2"></i> <b>HAPUS</b>
-                      </a>
-                      <a href="#" class="btn btn-info btn-glow btn-sm m-1 tombolEditBuku">
-                        <i class="ft-edit-3"></i> <b>EDIT</b>
-                        <input type="hidden" value="{{ $item->id }}" class="idBuku">
-                      </a>
-                    </td>
+                    @if(Auth::user()->level == 0)
+                      <td>
+                        <a href="/admin/buku/hapus-buku/{{ $item->id }}" class="btn btn-danger btn-glow btn-sm m-1">
+                          <i class="ft-trash-2"></i> <b>HAPUS</b>
+                        </a>
+                        <a href="#" class="btn btn-info btn-glow btn-sm m-1 tombolEditBuku">
+                          <i class="ft-edit-3"></i> <b>EDIT</b>
+                          <input type="hidden" value="{{ $item->id }}" class="idBuku">
+                        </a>
+                      </td>
+                    @endif
                   </tr>
                 @endforeach
               </tbody>
@@ -146,7 +150,9 @@
                   <th>Penerbit</th>
                   <th>Tahun Terbit</th>
                   <th>ISBN</th>
-                  <th>Action</th>
+                  @if(Auth::user()->level == 0)
+                    <th>Action</th>
+                  @endif
                 </tr>
               </tfoot>
             </table>

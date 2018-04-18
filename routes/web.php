@@ -1,5 +1,9 @@
 <?php
 
+Route::get('/register', 'AdminPagesController@register');
+
+Route::post('/register', 'UsersController@daftarUser');
+
 Route::get('/login', ['as' => 'login', 'uses' => 'AdminPagesController@login']);
 
 Route::post('/login', 'UsersController@auth');

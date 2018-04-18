@@ -144,9 +144,6 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
             <li class="menu-navigasi" id="listBuku">
               <a class="menu-item" href="/admin">List Buku</a>
             </li>
-            <li class="menu-navigasi" id="bukuPinjaman">
-              <a class="menu-item" href="/admin/buku-pinjaman">Buku Pinjaman</a>
-            </li>
           </ul>
         </li>
 
